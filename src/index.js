@@ -11,7 +11,7 @@ import productsRouter from './routers/products.js';
 
 app.use(authorizationRouter);
 app.use(productsRouter);
-// app.use(transactionsRouter);
+app.use(transactionsRouter);
 
 dotenv.config();
 app.listen(process.env.PORT, () => console.log(`Server is running on port ${process.env.PORT}`));

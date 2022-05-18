@@ -21,13 +21,15 @@ export async function NewProductController(req, res) {
 
             productName, productPrice, productDescription,
             productImage, productCategory, productQuantity,
-            productStatus, productDate, productTime, productOwner } = req.body;
+            productStatus, productDate, productTime, productOwner, 
+            productOwnerName } = req.body;
 
         await db.collection('smartstore_products').insertOne({
 
             productName, productPrice, productDescription,
             productImage, productCategory, productQuantity,
-            productStatus, productDate, productTime, productOwner
+            productStatus, productDate, productTime, productOwner,
+            productOwnerName
 
         });
 
